@@ -16,8 +16,10 @@
 {
     // Override point for customization after application launch.
     // Let the device know we want to receive push notifications
-	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    //---------------------------------------------------------------------------------------------------//
+//	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+//     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    //---------------------------------------------------------------------------------------------------//
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -29,12 +31,16 @@
 
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
-	NSLog(@"My token is: %@", deviceToken);
+    //---------------------------------------------------------------------------------------------------//
+//	NSLog(@"My token is: %@", deviceToken);
+    //---------------------------------------------------------------------------------------------------//
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
-	NSLog(@"Failed to get token, error: %@", error);
+    //---------------------------------------------------------------------------------------------------//
+//	NSLog(@"Failed to get token, error: %@", error);
+    //---------------------------------------------------------------------------------------------------//
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

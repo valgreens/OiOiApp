@@ -12,4 +12,6 @@
 
 + (RCServer *) sharedInstance;
 
+- (void)request;
+
 @end

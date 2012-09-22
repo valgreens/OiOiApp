@@ -7,6 +7,7 @@
 //
 
 #import "RCServer.h"
+#import "AFJSONRequestOperation.h"
 
 @implementation RCServer
 
@@ -31,7 +32,19 @@
 
 - (void)_init
 {
-    // Custom init method 
+    // Custom init method
+}
+
+#pragma mark - Request
+
+- (void)request
+{
+    NSURL *url = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/public_timeline.json"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    
+    NSLog(@"Data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 @end
+
