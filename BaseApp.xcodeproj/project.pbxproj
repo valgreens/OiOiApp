@@ -18,6 +18,7 @@
 		D1628570160E51AE00C9B994 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D162856F160E51AE00C9B994 /* Default-568h@2x.png */; };
 		D1628573160E51AE00C9B994 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1628572160E51AE00C9B994 /* ViewController.m */; };
 		D1628576160E51AE00C9B994 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1628574160E51AE00C9B994 /* ViewController.xib */; };
+		D162857E160E52B100C9B994 /* RCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D162857D160E52B100C9B994 /* RCServer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		D1628571160E51AE00C9B994 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D1628572160E51AE00C9B994 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D1628575160E51AE00C9B994 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		D162857C160E52B100C9B994 /* RCServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCServer.h; sourceTree = "<group>"; };
+		D162857D160E52B100C9B994 /* RCServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCServer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				D1628572160E51AE00C9B994 /* ViewController.m */,
 				D1628574160E51AE00C9B994 /* ViewController.xib */,
 				D1628560160E51AE00C9B994 /* Supporting Files */,
+				D162857C160E52B100C9B994 /* RCServer.h */,
+				D162857D160E52B100C9B994 /* RCServer.m */,
 			);
 			path = BaseApp;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				D1628566160E51AE00C9B994 /* main.m in Sources */,
 				D162856A160E51AE00C9B994 /* AppDelegate.m in Sources */,
 				D1628573160E51AE00C9B994 /* ViewController.m in Sources */,
+				D162857E160E52B100C9B994 /* RCServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

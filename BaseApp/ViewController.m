@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "RCServer.h"
 
 @interface ViewController ()
-
+{
+    RCServer *server;
+}
 @end
 
 @implementation ViewController
@@ -18,6 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    server = [RCServer sharedInstance];
 }
 
 - (void)didReceiveMemoryWarning
