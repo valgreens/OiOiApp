@@ -1,0 +1,3 @@
+[submodule "BaseApp/libs/AFNetworking"]
+	path = BaseApp/libs/AFNetworking
+	url = https://rcabamo@github.com/AFNetworking/AFNetworking.git
