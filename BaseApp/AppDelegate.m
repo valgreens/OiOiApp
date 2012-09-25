@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "LoginViewController.h"
+
+#import "Parse/Parse.h"
 
 @implementation AppDelegate
 
@@ -23,17 +26,41 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    self.loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    
+    self.window.rootViewController = self.loginViewController;
     [self.window makeKeyAndVisible];
+    
+    
+    [Parse setApplicationId:@"IWnh7fOQ705EbuUOt3hOlc50sl8anAky7uPjk6zS"
+                  clientKey:@"CXIOYtyGLHOUMUzTrw21qn5MTiUN5LbdK9Fnm2OW"];
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+                                                    UIRemoteNotificationTypeAlert|
+                                                    UIRemoteNotificationTypeSound];
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    // NSLog([userDefaults standardUserDefaults]);
+    if ([prefs stringForKey:@"login_key"])
+    {
+        NSLog(@"Existe la login key");
+        NSLog(@"Key: %@", [prefs stringForKey:@"login_key"]);
+    }
+    
     return YES;
 }
 
-- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+// Parse
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
 {
-    //---------------------------------------------------------------------------------------------------//
-//	NSLog(@"My token is: %@", deviceToken);
-    //---------------------------------------------------------------------------------------------------//
+    // Tell Parse about the device token.
+    [PFPush storeDeviceToken:newDeviceToken];
+    // Subscribe to the global broadcast channel.
+    [PFPush subscribeToChannelInBackground:@"oi-development"];
+}
+
+//Parse
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error

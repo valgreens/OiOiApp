@@ -21,14 +21,24 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    server = [RCServer sharedInstance];
-    [server request];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    if ([prefs stringForKey:@"login_key"] != nil)
+    {
+        NSLog(@"Existe la login key");
+        NSLog(@"Key: %@", [prefs stringForKey:@"login_key"]);
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction) refresh: (id) sender
+{
+    
 }
 
 @end
