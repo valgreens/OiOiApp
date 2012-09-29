@@ -38,13 +38,13 @@
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
     
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     // NSLog([userDefaults standardUserDefaults]);
-    if ([prefs stringForKey:@"login_key"])
-    {
-        NSLog(@"Existe la login key");
-        NSLog(@"Key: %@", [prefs stringForKey:@"login_key"]);
-    }
+    //if ([prefs stringForKey:@"login_key"])
+    //{
+      //  NSLog(@"Creada login_key");
+        //NSLog(@"Key: %@", [prefs stringForKey:@"login_key"]);
+    //}
     
     return YES;
 }

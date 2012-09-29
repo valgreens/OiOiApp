@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) NSArray *myOis;
+@property (nonatomic, strong) UINavigationController *navigationController;
 
 @end

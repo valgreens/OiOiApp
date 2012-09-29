@@ -10,6 +10,7 @@
 
 @class ViewController;
 @class LoginViewController;
+@class OiViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -17,5 +18,6 @@
 
 @property (strong, nonatomic) ViewController *viewController;
 @property (strong, nonatomic) LoginViewController *loginViewController;
+@property (strong, nonatomic) OiViewController *oiViewController;
 
 @end

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3100017216160BBC00022D9B /* OiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3100017016160BBC00022D9B /* OiViewController.m */; };
+		3100017316160BBC00022D9B /* OiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3100017116160BBC00022D9B /* OiViewController.xib */; };
+		3100017D16164AB800022D9B /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3100017C16164AB800022D9B /* app-icon.png */; };
+		3100017F16164B7C00022D9B /* app-icon-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 3100017E16164B7C00022D9B /* app-icon-retina.png */; };
 		31198B06161038360078F2D0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31198B04161038360078F2D0 /* LoginViewController.m */; };
 		31198B07161038360078F2D0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31198B05161038360078F2D0 /* LoginViewController.xib */; };
+		31AD6902161377BF005009BA /* AVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AD6901161377BF005009BA /* AVNetwork.m */; };
 		31E63E1A160F828D00CA2AC7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E63E19160F828D00CA2AC7 /* Parse.framework */; };
 		31E63E1D160F82D900CA2AC7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E63E1C160F82D900CA2AC7 /* AudioToolbox.framework */; };
 		31E63E1F160F82EA00CA2AC7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E63E1E160F82EA00CA2AC7 /* CFNetwork.framework */; };
@@ -34,9 +39,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3100016F16160BBC00022D9B /* OiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OiViewController.h; sourceTree = "<group>"; };
+		3100017016160BBC00022D9B /* OiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OiViewController.m; sourceTree = "<group>"; };
+		3100017116160BBC00022D9B /* OiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OiViewController.xib; sourceTree = "<group>"; };
+		3100017C16164AB800022D9B /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		3100017E16164B7C00022D9B /* app-icon-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-retina.png"; sourceTree = "<group>"; };
 		31198B03161038360078F2D0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		31198B04161038360078F2D0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		31198B05161038360078F2D0 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		31AD6900161377BE005009BA /* AVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVNetwork.h; sourceTree = "<group>"; };
+		31AD6901161377BF005009BA /* AVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVNetwork.m; sourceTree = "<group>"; };
 		31E63E19160F828D00CA2AC7 /* Parse.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		31E63E1C160F82D900CA2AC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		31E63E1E160F82EA00CA2AC7 /* CFNetwork.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -95,6 +107,8 @@
 		D162854A160E51AE00C9B994 = {
 			isa = PBXGroup;
 			children = (
+				3100017E16164B7C00022D9B /* app-icon-retina.png */,
+				3100017C16164AB800022D9B /* app-icon.png */,
 				D162855F160E51AE00C9B994 /* BaseApp */,
 				D1628558160E51AE00C9B994 /* Frameworks */,
 				D1628556160E51AE00C9B994 /* Products */,
@@ -141,8 +155,13 @@
 				D1628571160E51AE00C9B994 /* ViewController.h */,
 				D1628572160E51AE00C9B994 /* ViewController.m */,
 				D1628574160E51AE00C9B994 /* ViewController.xib */,
+				3100016F16160BBC00022D9B /* OiViewController.h */,
+				3100017016160BBC00022D9B /* OiViewController.m */,
+				3100017116160BBC00022D9B /* OiViewController.xib */,
 				D162857C160E52B100C9B994 /* RCServer.h */,
 				D162857D160E52B100C9B994 /* RCServer.m */,
+				31AD6900161377BE005009BA /* AVNetwork.h */,
+				31AD6901161377BF005009BA /* AVNetwork.m */,
 				D1628560160E51AE00C9B994 /* Supporting Files */,
 			);
 			path = BaseApp;
@@ -219,6 +238,9 @@
 				D1628570160E51AE00C9B994 /* Default-568h@2x.png in Resources */,
 				D1628576160E51AE00C9B994 /* ViewController.xib in Resources */,
 				31198B07161038360078F2D0 /* LoginViewController.xib in Resources */,
+				3100017316160BBC00022D9B /* OiViewController.xib in Resources */,
+				3100017D16164AB800022D9B /* app-icon.png in Resources */,
+				3100017F16164B7C00022D9B /* app-icon-retina.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +256,8 @@
 				D1628573160E51AE00C9B994 /* ViewController.m in Sources */,
 				D162857E160E52B100C9B994 /* RCServer.m in Sources */,
 				31198B06161038360078F2D0 /* LoginViewController.m in Sources */,
+				31AD6902161377BF005009BA /* AVNetwork.m in Sources */,
+				3100017216160BBC00022D9B /* OiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
