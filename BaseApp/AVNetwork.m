@@ -92,7 +92,7 @@
 
 - (NSArray *) lisOfOisByUser: (NSString *)email
 {
-    NSString *s = [NSString stringWithFormat:@"http://api.blibb.net/ois/%@?fields=channel,owner,senders,subscribers,invited,created_at", email];
+    NSString *s = [NSString stringWithFormat:@"http://api.blibb.net/ois/%@?fields=name,channel,owner,senders,subscribers,invited,created_at", email];
     NSURL *url = [NSURL URLWithString:s];
     
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];

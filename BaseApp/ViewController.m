@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "OiViewController.h"
+#import "NewOiViewController.h"
 #import "AVNetwork.h"
 
 @interface ViewController ()
@@ -18,20 +19,21 @@
 
 @implementation ViewController
 
-@synthesize navigationController;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"OiOi";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(newOi:)];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:174/255.0 alpha:1.0];
     
     server = [AVNetwork sharedNetwork];
     
-    //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    //NSString *key = [prefs stringForKey:@"login_key"];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *email = [prefs stringForKey:@"email"];
     
-    self.myOis = [server listOfOis];
+    self.myOis = [server lisOfOisByUser: email];
     
 }
 
@@ -72,6 +74,7 @@
         
         NSString *name = [[self.myOis objectAtIndex:(int)indexPath.row] objectForKey: @"name"];
         result.textLabel.text = [NSString stringWithFormat:@"%@", name];
+        result.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return result;
 }
@@ -93,10 +96,10 @@
                                                                                                  
                    
 
-- (IBAction) refresh: (id) sender
+- (void) newOi: (id) sender
 {
-    self.myOis = [server listOfOis];
-    [self.table reloadData];
+    NewOiViewController *newOiView = [[NewOiViewController alloc] initWithNibName:@"NewOiViewController" bundle:nil];
+    [self.navigationController pushViewController:newOiView animated:YES];
 }
 
 @end

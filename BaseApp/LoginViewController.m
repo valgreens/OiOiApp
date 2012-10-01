@@ -63,8 +63,11 @@
     NSLog(@"Creada login_key");
     NSLog(@"Key: %@", key);
     
-    ViewController *vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    [self presentViewController:vc animated:YES completion:nil];
+    //ViewController *vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    //[self presentViewController:vc animated:YES completion:nil];
+    
+    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil]];
+    [self presentViewController:controller animated:YES completion:nil];
     
 }
 

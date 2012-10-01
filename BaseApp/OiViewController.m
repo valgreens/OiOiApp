@@ -39,8 +39,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     server = [AVNetwork sharedNetwork];
-    self.navBar.topItem.title = [NSString stringWithFormat:@"%@", [self.oiData objectForKey:@"name"]];
+    self.title = [NSString stringWithFormat:@"%@", [self.oiData objectForKey:@"name"]];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Push" style:UIBarButtonItemStyleBordered target:self action:@selector(pushMessage)];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:80/255.0 green:160/255.0 blue:174/255.0 alpha:1.0];
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,12 +109,7 @@
     return result;
 }
 
-- (IBAction) goBack
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (IBAction) pushMessage
+- (void) pushMessage
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *key = [prefs stringForKey:@"login_key"];
