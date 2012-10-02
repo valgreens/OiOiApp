@@ -12,5 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) NSArray *myOis;
+@property (strong, nonatomic) NSMutableArray *subscribed;
+@property (strong, nonatomic) NSMutableArray *invited;
 
 @end
