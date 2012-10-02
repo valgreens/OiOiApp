@@ -33,6 +33,7 @@
     
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSString *email = [prefs stringForKey:@"email"];
+    NSString *deviceToken = [prefs stringForKey:@"deviceToken"];
     
     self.myOis = [server lisOfOisByUser: email];
     self.subscribed = [[NSMutableArray alloc] init];
@@ -44,6 +45,8 @@
         if (index1 != NSNotFound)
         {
             [self.subscribed insertObject:[self.myOis objectAtIndex:i] atIndex:0];
+            // Tell Parse about the device token.
+            [PFPush storeDeviceToken:deviceToken];
             [PFPush subscribeToChannelInBackground:[[self.myOis objectAtIndex:i] objectForKey:@"channel"]];
             continue;
         }

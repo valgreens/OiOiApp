@@ -32,8 +32,8 @@
     [self.window makeKeyAndVisible];
     
     
-    [Parse setApplicationId:@"IWnh7fOQ705EbuUOt3hOlc50sl8anAky7uPjk6zS"
-                  clientKey:@"CXIOYtyGLHOUMUzTrw21qn5MTiUN5LbdK9Fnm2OW"];
+    [Parse setApplicationId:@"FeddUqZ1DLLYqVTXMWP0p0sFTAbMXMkmES6fTOVy"
+                  clientKey:@"bcBAblkupXfqi1U0ooN4bXy5faQYBZDNG2m33S7b"];
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
                                                     UIRemoteNotificationTypeAlert|
                                                     UIRemoteNotificationTypeSound];
@@ -52,6 +52,9 @@
 // Parse
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
 {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:newDeviceToken forKey:@"deviceToken"];
+    [prefs synchronize];
     // Tell Parse about the device token.
     [PFPush storeDeviceToken:newDeviceToken];
     // Subscribe to the global broadcast channel.
