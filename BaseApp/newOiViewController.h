@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewOiViewController : UIViewController
+@interface NewOiViewController : UIViewController <UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITableView *contactsTable;
+@property (strong, nonatomic) IBOutlet UITextField *nameField;
+
 
 @end

@@ -16,6 +16,7 @@
 		3166FB2E1619F5E1003C1E8E /* NewOiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3166FB2C1619F5E1003C1E8E /* NewOiViewController.m */; };
 		3166FB2F1619F5E1003C1E8E /* NewOiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3166FB2D1619F5E1003C1E8E /* NewOiViewController.xib */; };
 		31AD6902161377BF005009BA /* AVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AD6901161377BF005009BA /* AVNetwork.m */; };
+		31ADA8C2161CA7C600F6A8B2 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31ADA8C1161CA7C600F6A8B2 /* Entitlements.plist */; };
 		31E63E1A160F828D00CA2AC7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E63E19160F828D00CA2AC7 /* Parse.framework */; };
 		31E63E1D160F82D900CA2AC7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E63E1C160F82D900CA2AC7 /* AudioToolbox.framework */; };
 		31E63E1F160F82EA00CA2AC7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31E63E1E160F82EA00CA2AC7 /* CFNetwork.framework */; };
@@ -54,6 +55,7 @@
 		3166FB2D1619F5E1003C1E8E /* NewOiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewOiViewController.xib; sourceTree = "<group>"; };
 		31AD6900161377BE005009BA /* AVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVNetwork.h; sourceTree = "<group>"; };
 		31AD6901161377BF005009BA /* AVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVNetwork.m; sourceTree = "<group>"; };
+		31ADA8C1161CA7C600F6A8B2 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		31E63E19160F828D00CA2AC7 /* Parse.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		31E63E1C160F82D900CA2AC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		31E63E1E160F82EA00CA2AC7 /* CFNetwork.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				D1628561160E51AE00C9B994 /* BaseApp-Info.plist */,
+				31ADA8C1161CA7C600F6A8B2 /* Entitlements.plist */,
 				D1628562160E51AE00C9B994 /* InfoPlist.strings */,
 				D1628565160E51AE00C9B994 /* main.m */,
 				D1628567160E51AE00C9B994 /* BaseApp-Prefix.pch */,
@@ -250,6 +253,7 @@
 				3100017D16164AB800022D9B /* app-icon.png in Resources */,
 				3100017F16164B7C00022D9B /* app-icon-retina.png in Resources */,
 				3166FB2F1619F5E1003C1E8E /* NewOiViewController.xib in Resources */,
+				31ADA8C2161CA7C600F6A8B2 /* Entitlements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
